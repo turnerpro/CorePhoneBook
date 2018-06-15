@@ -1,0 +1,6 @@
+<form #recordForm="ngForm" (ngSubmit)="onSubmit(recordForm.value)">
+  <input name="firstName" [(ngModel)]="firstName">
+  <input name="lastName" [(ngModel)]="lastName">
+  <input name="phoneNumber" [(ngModel)]="phoneNumber">
+  <button type="submit">Save</button>
+</form>

@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { HomeComponent } from './home/home.component';
 import { PhonerecordsComponent } from './phonerecords/phonerecords.component';
+import { AddRecordComponent } from './add-record/add-record.component';
 import { HttpModule } from '@angular/http';
 
 @NgModule({
@@ -15,7 +16,8 @@ import { HttpModule } from '@angular/http';
     AppComponent,
     NavMenuComponent,
     HomeComponent,
-    PhonerecordsComponent
+    PhonerecordsComponent,
+    AddRecordComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -24,7 +26,8 @@ import { HttpModule } from '@angular/http';
     FormsModule, ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', redirectTo: 'phonerecords', pathMatch: 'full' },
-      { path: 'phonerecords', component: PhonerecordsComponent }
+      { path: 'phonerecords', component: PhonerecordsComponent },
+      { path: 'add-record', component: AddRecordComponent }
     ])
   ],
   providers: [],
